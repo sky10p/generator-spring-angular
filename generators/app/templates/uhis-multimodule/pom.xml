@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<uhis.version>0.0.1</uhis.version>
+		<jacoco.maven.plugin.version>0.8.1</jacoco.maven.plugin.version>
+		<com.auth0.java-jwt.version>3.4.0</com.auth0.java-jwt.version>
+		<com.google.guava>26.0-jre</com.google.guava>
+		<jackson.core.databind>2.9.7</jackson.core.databind>
+	</properties>
+
+
+	<groupId>com.everis.uhis</groupId>
+	<artifactId>uhis-multimodule</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+	<name>UHIS Project Multimodule</name>
+
+	<modules>
+		<module>../<$= data_name %></module>
+		<module>../<$= persistence_name %></module>
+		<module>../<%= business_logic %></module>
+		<module>../<$= rest_name %></module>
+		<module>../<$= webapp_name %></module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.everis.uhis</groupId>
+				<artifactId><$= data_name %></artifactId>
+				<version>${uhis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.everis.uhis</groupId>
+				<artifactId><%= business_logic %></artifactId>
+				<version>${uhis.version}</version>
+
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.everis.uhis</groupId>
+				<artifactId><$= persistence_name %></artifactId>
+				<version>${uhis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.everis.uhis</groupId>
+				<artifactId><$= webapp_name %></artifactId>
+				<version>${uhis.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.auth0</groupId>
+				<artifactId>java-jwt</artifactId>
+				<version>${com.auth0.java-jwt.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${com.google.guava}</version>
+			</dependency>
+
+			<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${jackson.core.databind}</version>
+</dependency>
+		</dependencies>
+
+
+
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<mainClass>com.everis.uhis.rest.UhisRestApplication</mainClass>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

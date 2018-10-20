@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  .body {
+    flex: 1;
+    padding-top: 31px;
+  
+    background-color: rgb(246, 246, 246);
+  }
+  
+  

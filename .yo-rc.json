@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Pablo Guijarro",
+      "authorEmail": "sky10pg@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

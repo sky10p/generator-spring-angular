@@ -1,0 +1,56 @@
+.all {
+    background: black;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-image: url('/assets/images/login/background-login.png')
+}
+
+.middle-body{
+     margin: 0 auto;
+     width: 330px; 
+}
+
+    .middle-body img{
+        margin-top: 70px;
+
+    }
+
+.login-form{
+    color:black;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: -4px 52px 140px #999;
+}
+
+.login-form {
+    padding: 16px;
+}
+
+    .login-form h1 {
+        font-size: 29px;
+        margin-bottom: 39px;
+    }
+
+
+.form-control {
+        width: 84%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        margin-bottom: 18px;
+    }
+
+.form-login button{
+    float: right;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
