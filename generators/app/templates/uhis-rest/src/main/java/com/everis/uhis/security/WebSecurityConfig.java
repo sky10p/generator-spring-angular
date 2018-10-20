@@ -38,11 +38,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .cors().and()
                 .authorizeRequests()
+                .antMatchers("/api/**").authenticated()
                 .antMatchers(HttpMethod.POST, PRV_LOGIN_URL).permitAll()
-                .anyRequest().authenticated().and()
+                .anyRequest().permitAll().and()
                 .addFilterBefore(loginFilter, UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
-        		
+
     }
 
     @Bean
