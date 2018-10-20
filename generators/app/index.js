@@ -128,12 +128,17 @@ module.exports = class extends Generator {
            rest_name: this.submodulesAnswers.restName,
            rest_camelcase: toCamelCase(this.submodulesAnswers.restName),
            webapp_name: this.submodulesAnswers.webappName,
-           webapp_camelcase: toCamelCase(this.submodulesAnswers.webappName),
-           DATABASE_TYPE: this.databaseAnswer.databaseType
+           webapp_camelcase: toCamelCase(this.submodulesAnswers.webappName)
 
          }
     );
-  }
+
+        }
+
+    callOtherModules(){
+      this.composeWith(require.resolve('../properties'), {appName: this.answers.projectName, databaseType: this.databaseAnswer.databaseType, propertiesType: this.databaseAnswer.propertiesType});
+    }
+
 
   installingNpmDependencies(){
     this.installDependencies()
