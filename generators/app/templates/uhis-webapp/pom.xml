@@ -73,8 +73,20 @@
 						</configuration>
 					</execution>
 
+
 					<execution>
 						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<!-- Optional configuration which provides for running any npm command -->
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+
+          	<execution>
+						<id>npm build</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>

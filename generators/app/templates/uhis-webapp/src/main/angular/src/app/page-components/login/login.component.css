@@ -1,20 +1,16 @@
 .all {
-    background: black;
+    background: white;
     height: 100%;
     width: 100%;
     color: white;
-    background-image: url('/assets/images/login/background-login.png')
 }
 
 .middle-body{
      margin: 0 auto;
-     width: 330px; 
+     width: 330px;
 }
 
-    .middle-body img{
-        margin-top: 70px;
 
-    }
 
 .login-form{
     color:black;
@@ -23,6 +19,7 @@
     border-radius: 5px;
     background: #ffffff;
     box-shadow: -4px 52px 140px #999;
+    margin-top: 140px;
 }
 
 .login-form {
