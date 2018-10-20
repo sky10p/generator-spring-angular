@@ -72,6 +72,25 @@ module.exports = class extends Generator {
 
   }
 
+  async askForDatabaseProject(){
+    this.databaseAnswer = await this.prompt([{
+      type: 'list',
+      name: 'databaseType',
+      message: 'Choose the database to use? (You can change it later)',
+      choices: ['h2','postgresql'],
+      default: 'h2'
+    },{
+      type: 'list',
+      name: 'propertiesType',
+      message: 'What type of property file would you like to use?',
+      choices: ['properties','yml'],
+      default: 'properties',
+      store: true
+    }])
+
+
+  }
+
 
 
 
@@ -110,6 +129,7 @@ module.exports = class extends Generator {
            rest_camelcase: toCamelCase(this.submodulesAnswers.restName),
            webapp_name: this.submodulesAnswers.webappName,
            webapp_camelcase: toCamelCase(this.submodulesAnswers.webappName),
+           DATABASE_TYPE: this.databaseAnswer.databaseType
 
          }
     );
