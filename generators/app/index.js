@@ -86,6 +86,8 @@ module.exports = class extends Generator {
       addReplace(path, /(uhis-webapp)/g, this.submodulesAnswers.webappName);
 
       addReplace(path, /(uhis)/g, this.answers.projectName);
+      addReplace(path, /(Uhis)/g, toCamelCase(this.answers.projectName),);
+      addReplace(path, /(UHIS)/g, this.answers.projectName.toUpperCase());
 
       return path;
 
@@ -111,6 +113,10 @@ module.exports = class extends Generator {
 
          }
     );
+  }
+
+  installingNpmDependencies(){
+    this.installDependencies()
   }
 
   generated(){
