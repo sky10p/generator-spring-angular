@@ -1,4 +1,4 @@
-import { UhisFormsModule } from './../forms/forms.module';
+import { <%= appName_CamelCase %>FormsModule } from './../forms/forms.module';
 import { BootstrapModule } from './../bootstrap/bootstrap.module';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
@@ -14,7 +14,7 @@ export function tokenGetter() {
 @NgModule({
   imports: [
     CommonModule,
-    UhisFormsModule,
+    <%= appName_CamelCase %>FormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter
@@ -24,11 +24,11 @@ export function tokenGetter() {
     NgProgressHttpModule.forRoot()
   ],
   exports: [
-    UhisFormsModule,
+    <%= appName_CamelCase %>FormsModule,
     JwtModule,
     NgProgressModule,
     NgProgressHttpModule
   ],
   declarations: []
 })
-export class UhisCoreModule { }
+export class <%= appName_CamelCase %>CoreModule { }

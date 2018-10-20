@@ -4,17 +4,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId><$= rest_name %></artifactId>
+	<artifactId><%= rest_name %></artifactId>
 	<packaging>war</packaging>
 
-	<name><$= rest_name %></name>
-	<description>UHIS Project Rest</description>
+	<name><%= rest_name %></name>
+	<description><%= APPNAME_UPPERCASE %> Project Rest</description>
 
 	<parent>
-		<groupId>com.everis.uhis</groupId>
-		<artifactId>uhis-multimodule</artifactId>
+		<groupId>com.everis.<%= appName %></groupId>
+		<artifactId><%= appName %>-multimodule</artifactId>
 		<version>0.0.1</version>
-		<relativePath>../uhis-multimodule</relativePath>
+		<relativePath>../<%= appName %>-multimodule</relativePath>
 	</parent>
 
 	<dependencies>
@@ -44,12 +44,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.everis.uhis</groupId>
+			<groupId>com.everis.<%= appName %></groupId>
 			<artifactId><%= business_logic %></artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.everis.uhis</groupId>
-			<artifactId><$= webapp_name %></artifactId>
+			<groupId>com.everis.<%= appName %></groupId>
+			<artifactId><%= webapp_name %></artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

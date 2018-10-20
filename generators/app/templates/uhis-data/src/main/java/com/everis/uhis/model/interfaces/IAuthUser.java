@@ -1,6 +1,6 @@
-package com.everis.uhis.model.interfaces;
+package com.everis.<%= appName %>.model.interfaces;
 
-import com.everis.uhis.model.AuthUserDto;
+import com.everis.<%= appName %>.model.AuthUserDto;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = AuthUserDto.class)

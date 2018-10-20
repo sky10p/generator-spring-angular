@@ -1,4 +1,4 @@
-package com.everis.uhis.exceptions;
+package com.everis.<%= appName %>.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @RestControllerAdvice
-public class UhisExceptionHandler extends ResponseEntityExceptionHandler
+public class <%= appName_CamelCase %>ExceptionHandler extends ResponseEntityExceptionHandler
 {
     @ExceptionHandler({ Throwable.class })
     public final ResponseEntity<ErrorDetails> handleException(Throwable ex, WebRequest request)

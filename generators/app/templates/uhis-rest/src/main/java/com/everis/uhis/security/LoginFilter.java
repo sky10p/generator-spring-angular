@@ -1,4 +1,4 @@
-package com.everis.uhis.security;
+package com.everis.<%= appName %>.security;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,8 +18,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import com.everis.uhis.exceptions.ErrorDetails;
-import com.everis.uhis.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.exceptions.ErrorDetails;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class LoginFilter extends AbstractAuthenticationProcessingFilter

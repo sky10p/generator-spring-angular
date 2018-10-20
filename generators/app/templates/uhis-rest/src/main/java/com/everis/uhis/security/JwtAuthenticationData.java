@@ -1,4 +1,4 @@
-package com.everis.uhis.security;
+package com.everis.<%= appName %>.security;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,7 +16,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 public final class JwtAuthenticationData
 {
 
-    private static final String PRV_ISSUER = "uhis";
+    private static final String PRV_ISSUER = "<%= appName %>";
     private static final String PRV_AUTHORITIES_CLAIM = "authorities";
     private static final String PRV_JWT_SECRET_KEY = "Jafas4d54as5gd4a6s5d465a4fr6ea4g56456a4h441ds20fasd.fhashdfhaehfajhejkfhajkhefjkhasljkfdhasfhdasdf";
 

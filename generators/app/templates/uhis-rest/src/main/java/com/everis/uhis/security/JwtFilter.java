@@ -1,4 +1,4 @@
-package com.everis.uhis.security;
+package com.everis.<%= appName %>.security;
 
 import java.io.IOException;
 

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './page-components/login/login.component';
-import { UhisCoreModule } from './modules/uhis-core/uhis-core.module';
+import { <%= appName_CamelCase %>CoreModule } from './modules/<%= appName %>-core/<%= appName %>-core.module';
 import { RoutingModule } from './modules/routing/routing.module';
 import { HomeComponent } from './page-components/home/home.component';
 import { HeaderComponent } from './core-components/header/header.component';
@@ -24,7 +24,7 @@ import { LoginInterceptor } from './interceptors/login/login.interceptor';
   ],
   imports: [
     CoreModule,
-    UhisCoreModule,
+    <%= appName_CamelCase %>CoreModule,
     RoutingModule
   ],
   providers: [

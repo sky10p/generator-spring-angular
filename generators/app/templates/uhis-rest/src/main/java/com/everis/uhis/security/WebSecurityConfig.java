@@ -1,4 +1,4 @@
-package com.everis.uhis.security;
+package com.everis.<%= appName %>.security;
 
 import org.apache.catalina.filters.CorsFilter;
 import org.springframework.context.annotation.Bean;
@@ -48,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     @Bean
     public AuthenticationProvider getAuthenticationProvider()
     {
-        return new UhisAuthenticationProvider();
+        return new <%= appName_CamelCase %>AuthenticationProvider();
     }
 
     @Override

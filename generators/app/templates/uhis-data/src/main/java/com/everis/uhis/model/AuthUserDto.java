@@ -1,6 +1,6 @@
-package com.everis.uhis.model;
+package com.everis.<%= appName %>.model;
 
-import com.everis.uhis.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 

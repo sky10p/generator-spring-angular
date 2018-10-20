@@ -1,4 +1,4 @@
-package com.everis.uhis.security;
+package com.everis.<%= appName %>.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +11,16 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import com.everis.uhis.model.interfaces.IAuthUser;
-import com.everis.uhis.services.ILoginService;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.services.ILoginService;
 
-public class UhisAuthenticationProvider implements AuthenticationProvider
+public class <%= appName_CamelCase %>AuthenticationProvider implements AuthenticationProvider
 {
 
     @Autowired
     private ILoginService loginService;
 
-    public UhisAuthenticationProvider()
+    public <%= appName_CamelCase %>AuthenticationProvider()
     {
         super();
     }

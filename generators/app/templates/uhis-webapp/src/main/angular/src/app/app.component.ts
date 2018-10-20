@@ -15,7 +15,7 @@ export class AppComponent {
     this.prv_addIcon('logout');
   }
 
-  title = 'uhis';
+  title = '<%= appName %>';
 
   private prv_addIcon(iconName: string) {
     const url = `assets/images/icons/${iconName}.svg`;

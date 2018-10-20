@@ -2,6 +2,7 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const rename = require('gulp-rename');
 
 function toCamelCase(snake_case){
   var camelCase = snake_case.replace(/-([a-z])/g, function(coincidence){
@@ -9,6 +10,11 @@ function toCamelCase(snake_case){
   });
 
   return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+}
+
+function addReplace(path, regexExpression, replaceBy){
+    path.basename = path.basename.replace(regexExpression, replaceBy);
+      path.dirname = path.dirname.replace(regexExpression, replaceBy);
 }
 
 module.exports = class extends Generator {
@@ -71,10 +77,27 @@ module.exports = class extends Generator {
 
 
   copyFolders(){
+
+    this.registerTransformStream(rename(path=> {
+      addReplace(path, /(uhis-business-logic)/g, this.submodulesAnswers.businessLogicName);
+      addReplace(path, /(uhis-data)/g, this.submodulesAnswers.dataName);
+      addReplace(path, /(uhis-persistence)/g, this.submodulesAnswers.persistenceName);
+      addReplace(path, /(uhis-rest)/g, this.submodulesAnswers.restName);
+      addReplace(path, /(uhis-webapp)/g, this.submodulesAnswers.webappName);
+
+      addReplace(path, /(uhis)/g, this.answers.projectName);
+
+      return path;
+
+    }));
+
     this.fs.copyTpl(
       this.templatePath(),
       this.destinationPath(),
          {
+           appName:this.answers.projectName,
+           appName_CamelCase: toCamelCase(this.answers.projectName),
+           APPNAME_UPPERCASE:this.answers.projectName.toUpperCase(),
            business_logic: this.submodulesAnswers.businessLogicName,
            business_logic_camelcase:toCamelCase(this.submodulesAnswers.businessLogicName),
            data_name: this.submodulesAnswers.dataName,

@@ -1,10 +1,10 @@
-import { UhisFormsModule } from './forms.module';
+import { <%= appName_CamelCase %>FormsModule } from './forms.module';
 
-describe('UhisFormsModule', () => {
-  let formsModule: UhisFormsModule;
+describe('<%= appName_CamelCase %>FormsModule', () => {
+  let formsModule: <%= appName_CamelCase %>FormsModule;
 
   beforeEach(() => {
-    formsModule = new UhisFormsModule();
+    formsModule = new <%= appName_CamelCase %>FormsModule();
   });
 
   it('should create an instance', () => {

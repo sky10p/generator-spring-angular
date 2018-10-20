@@ -1,9 +1,9 @@
-package com.everis.uhis;
+package com.everis.<%= appName %>;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.everis.uhis.security.SecurityEncoder;
+import com.everis.<%= appName %>.security.SecurityEncoder;
 
 public class SecurityEncoderTest
 {

@@ -14,4 +14,4 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   ],
   declarations: []
 })
-export class UhisFormsModule { }
+export class <%= appName_CamelCase %>FormsModule { }

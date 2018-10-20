@@ -8,13 +8,13 @@
 	<packaging>jar</packaging>
 
 	<name><%= business_logic %></name>
-	<description>UHIS Project Rest</description>
+	<description><%= APPNAME_UPPERCASE %> Project Rest</description>
 
 	<parent>
-		<groupId>com.everis.uhis</groupId>
-		<artifactId>uhis-multimodule</artifactId>
+		<groupId>com.everis.<%= appName %></groupId>
+		<artifactId><%= appName %>-multimodule</artifactId>
 		<version>0.0.1</version>
-		<relativePath>../uhis-multimodule</relativePath>
+		<relativePath>../<%= appName %>-multimodule</relativePath>
 	</parent>
 
 	<dependencies>
@@ -30,8 +30,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.everis.uhis</groupId>
-			<artifactId><$= persistence_name %></artifactId>
+			<groupId>com.everis.<%= appName %></groupId>
+			<artifactId><%= persistence_name %></artifactId>
 		</dependency>
 
 		<dependency>

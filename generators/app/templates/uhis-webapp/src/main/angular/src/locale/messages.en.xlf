@@ -228,35 +228,35 @@
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uhis.LogIn" datatype="html">
+      <trans-unit id="<%= appName %>.LogIn" datatype="html">
         <source>Log In</source><target state="final">Log In</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/page-components/login/login.component.html</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uhis.UserName" datatype="html">
+      <trans-unit id="<%= appName %>.UserName" datatype="html">
         <source>User Name</source><target state="final">User Name</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/page-components/login/login.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uhis.Password" datatype="html">
+      <trans-unit id="<%= appName %>.Password" datatype="html">
         <source>Password</source><target state="final">Password</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/page-components/login/login.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uhis.Remember" datatype="html">
+      <trans-unit id="<%= appName %>.Remember" datatype="html">
         <source>Remember</source><target state="final">Remember</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/page-components/login/login.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="uhis.Accept" datatype="html">
+      <trans-unit id="<%= appName %>.Accept" datatype="html">
         <source>Accept</source><target state="final">Accept</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/page-components/login/login.component.html</context>

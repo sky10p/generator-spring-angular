@@ -1,6 +1,6 @@
-package com.everis.uhis.services;
+package com.everis.<%= appName %>.services;
 
-import com.everis.uhis.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
 
 public interface ILoginService
 {

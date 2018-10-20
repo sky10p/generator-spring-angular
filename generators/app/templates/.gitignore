@@ -58,7 +58,7 @@ yarn-error.log
 *.rar
 
 **/main/resources/static
-**/<$= webapp_name %>/node
+**/<%= webapp_name %>/node
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

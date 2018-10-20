@@ -1,4 +1,4 @@
-package com.everis.uhis.entities;
+package com.everis.<%= appName %>.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.everis.uhis.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "UHIS_AUTH_USER")
+@Table(name = "<%= APPNAME_UPPERCASE %>_AUTH_USER")
 @Getter
 @Setter
 @NoArgsConstructor(force = true)

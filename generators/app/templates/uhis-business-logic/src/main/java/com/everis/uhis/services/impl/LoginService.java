@@ -1,16 +1,16 @@
-package com.everis.uhis.services.impl;
+package com.everis.<%= appName %>.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import com.everis.uhis.entities.AuthUserEntity;
-import com.everis.uhis.model.AuthUserDto;
-import com.everis.uhis.model.interfaces.IAuthUser;
-import com.everis.uhis.repositories.IAuthUserRepository;
-import com.everis.uhis.security.SecurityEncoder;
-import com.everis.uhis.services.ILoginService;
+import com.everis.<%= appName %>.entities.AuthUserEntity;
+import com.everis.<%= appName %>.model.AuthUserDto;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.repositories.IAuthUserRepository;
+import com.everis.<%= appName %>.security.SecurityEncoder;
+import com.everis.<%= appName %>.services.ILoginService;
 
 @Service
 public class LoginService implements ILoginService

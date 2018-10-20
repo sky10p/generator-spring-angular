@@ -7,17 +7,17 @@
 
     <div class="login-form">
       <div class="login-title">
-      <h1 i18n="@@uhis.LogIn">Log In</h1>
+      <h1 i18n="@@<%= appName %>.LogIn">Log In</h1>
       </div>
 
       <div class="form-login">
 
-              <input class="form-control" [(ngModel)]="username" type="text" i18n-placeholder="@@uhis.UserName" placeholder="User Name">
-              <input class="form-control" [(ngModel)]="password" type="password" i18n-placeholder="@@uhis.Password" placeholder="Password">
+              <input class="form-control" [(ngModel)]="username" type="text" i18n-placeholder="@@<%= appName %>.UserName" placeholder="User Name">
+              <input class="form-control" [(ngModel)]="password" type="password" i18n-placeholder="@@<%= appName %>.Password" placeholder="Password">
               <div class="row-form">
-              <!-- <input type="checkbox" value="remember"><label i18n="@@uhis.Remember">Remember</label> -->
+              <!-- <input type="checkbox" value="remember"><label i18n="@@<%= appName %>.Remember">Remember</label> -->
 
-              <button type="submit" (click)="login(username,password)" class="btnIniciar" i18n="@@uhis.Accept" mat-flat-button>Accept</button>
+              <button type="submit" (click)="login(username,password)" class="btnIniciar" i18n="@@<%= appName %>.Accept" mat-flat-button>Accept</button>
             </div>
       </div>
 

@@ -1,4 +1,4 @@
-package com.everis.uhis.rest;
+package com.everis.<%= appName %>.rest;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
@@ -12,17 +12,17 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.everis.uhis.entities.AuthUserEntity;
-import com.everis.uhis.initializer.UhisRestApplication;
-import com.everis.uhis.model.interfaces.IAuthUser;
-import com.everis.uhis.repositories.IAuthUserRepository;
-import com.everis.uhis.services.impl.LoginService;
+import com.everis.<%= appName %>.entities.AuthUserEntity;
+import com.everis.<%= appName %>.initializer.<%= appName_CamelCase %>RestApplication;
+import com.everis.<%= appName %>.model.interfaces.IAuthUser;
+import com.everis.<%= appName %>.repositories.IAuthUserRepository;
+import com.everis.<%= appName %>.services.impl.LoginService;
 
 @RunWith(MockitoJUnitRunner.class)
-@ContextConfiguration(classes = { UhisRestApplication.class })
+@ContextConfiguration(classes = { <%= appName_CamelCase %>RestApplication.class })
 @WebAppConfiguration
 @AutoConfigureMockMvc
-public class UhisRestApplicationTest
+public class <%= appName_CamelCase %>RestApplicationTest
 {
 
     @Mock

@@ -1,13 +1,13 @@
-import { UhisCoreModule } from './uhis-core.module';
+import { <%= appName_CamelCase %>CoreModule } from './<%= appName %>-core.module';
 
-describe('UhisCoreModule', () => {
-  let uhisCoreModule: UhisCoreModule;
+describe('<%= appName_CamelCase %>CoreModule', () => {
+  let <%= appName %>CoreModule: <%= appName_CamelCase %>CoreModule;
 
   beforeEach(() => {
-    uhisCoreModule = new UhisCoreModule();
+    <%= appName %>CoreModule = new <%= appName_CamelCase %>CoreModule();
   });
 
   it('should create an instance', () => {
-    expect(uhisCoreModule).toBeTruthy();
+    expect(<%= appName %>CoreModule).toBeTruthy();
   });
 });

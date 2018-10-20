@@ -4,17 +4,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId><$= webapp_name %></artifactId>
+	<artifactId><%= webapp_name %></artifactId>
 	<packaging>jar</packaging>
 
-	<name><$= webapp_name %></name>
-	<description>UHIS Project Webapp</description>
+	<name><%= webapp_name %></name>
+	<description><%= APPNAME_UPPERCASE %> Project Webapp</description>
 
 	<parent>
-		<groupId>com.everis.uhis</groupId>
-		<artifactId>uhis-multimodule</artifactId>
+		<groupId>com.everis.<%= appName %></groupId>
+		<artifactId><%= appName %>-multimodule</artifactId>
 		<version>0.0.1</version>
-		<relativePath>../uhis-multimodule</relativePath> <!-- lookup parent from repository -->
+		<relativePath>../<%= appName %>-multimodule</relativePath> <!-- lookup parent from repository -->
 	</parent>
 
 
