@@ -1,4 +1,4 @@
-# RPA Spring-Angular Generator
+# Spring-Angular Generator
 
 Yeoman generator that allows generating a project with Spring and angular with the following characteristics:
 
@@ -40,7 +40,7 @@ npm link
 
 ```shell
 yo
-yo rpa-spring-angular
+yo generator-spring-angular-spring-angular
 ```
 
 

@@ -1,7 +1,7 @@
 {
   "name": "generator-spring-angular",
   "version": "0.0.0",
-  "description": "Generator For RPA - Spring Angular Project",
+  "description": "Generator - Spring Angular Project",
   "homepage": "http://localhost:8080",
   "author": {
     "name": "Pablo Guijarro",
