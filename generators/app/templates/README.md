@@ -1,43 +1,32 @@
-# RPA Spring-Angular Generator
+# Spring - Angular Project
 
-Yeoman generator that allows generating a project with Spring and angular with the following characteristics:
+## Usage
 
--Migrations of automatic databases.
--Services of login.
--Project multimodule.
--Security.
+Tenemos los siguiente submódulos y paquetas
 
-## Steps to follow to use the generator
+* uhis-business-logic
+  * Utilidades, Servicios
+* uhis-data
+  * Modelos, Interfaces, Dao
+* uhis-multimodule
+  * Parent Module (For compile with maven)
+* uhis-persistence
+  * Entities, Repositories, Migraciones bases de datos.
+* uhis-rest
+  * Api Rest
+* uhis-webapp
+  * Página Web (Angular)
 
-1. Install nodeJS and npm.
-2. Install Angular Cli
+## Configuración base de datos
 
-```shell
-npm install -g @angular/cli
-```
+### Migraciones automáticas
 
-3. Install Yeoman
+Scripts en uhis-persistence/src/main/resources/db/migration/{databaseType}
 
-```shell
-npm install -g yo
-```
+### Configuración de conexión
 
-4. Download Spring-Angular Generator from Git
+Cambiar Property spring.profiles.active=<%= databaseType %>
 
-```shell
-git clone ${repo}
-```
-
-```shell
-npm install
-```
-
-```shell
-npm link
-```
-
-5. Execute yo and follow steps
-
-```shell
-yo
-```
+uhis-rest/src/main/resources/application-{database}.properties
+or
+uhis-rest/src/main/resources/application-yml
