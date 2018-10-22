@@ -25,7 +25,7 @@ npm install -g yo
 4. Download Spring-Angular Generator from Git
 
 ```shell
-git clone ${repo}
+git clone https://github.com/sky10p/generator-spring-angular
 ```
 
 ```shell
