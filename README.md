@@ -1,27 +1,48 @@
-# generator-rpa-spring-angular [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Generator For RPA - Spring Angular Project
+# RPA Spring-Angular Generator
 
-## Installation
+Yeoman generator that allows generating a project with Spring and angular with the following characteristics:
 
-First, install [Yeoman](http://yeoman.io) and generator-rpa-spring-angular using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+-Migrations of automatic databases.
+-Services of login.
+-Project multimodule.
+-Security.
 
-```bash
-npm install -g yo
-npm install -g generator-rpa-spring-angular
+## Steps to follow to use the generator
+
+1. Install nodeJS and npm.
+2. Install Angular Cli
+
+```shell
+npm install -g @angular/cli
 ```
 
-Then generate your new project:
+3. Install Yeoman
 
-```bash
+```shell
+npm install -g yo
+```
+
+4. Download Spring-Angular Generator from Git
+
+```shell
+git clone ${repo}
+```
+
+```shell
+npm install
+```
+
+```shell
+npm link
+```
+
+5. Execute yo and follow steps or yo {generator}
+
+```shell
+yo
 yo rpa-spring-angular
 ```
 
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License
 
