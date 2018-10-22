@@ -49,11 +49,11 @@ yo rpa-spring-angular
 MIT © [Pablo Guijarro]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-rpa-spring-angular.svg
-[npm-url]: https://npmjs.org/package/generator-rpa-spring-angular
-[travis-image]: https://travis-ci.org/sky10p/generator-rpa-spring-angular.svg?branch=master
-[travis-url]: https://travis-ci.org/sky10p/generator-rpa-spring-angular
-[daviddm-image]: https://david-dm.org/sky10p/generator-rpa-spring-angular.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/sky10p/generator-rpa-spring-angular
-[coveralls-image]: https://coveralls.io/repos/sky10p/generator-rpa-spring-angular/badge.svg
-[coveralls-url]: https://coveralls.io/r/sky10p/generator-rpa-spring-angular
+[npm-image]: https://badge.fury.io/js/generator-spring-angular.svg
+[npm-url]: https://npmjs.org/package/generator-spring-angular
+[travis-image]: https://travis-ci.org/sky10p/generator-spring-angular.svg?branch=master
+[travis-url]: https://travis-ci.org/sky10p/generator-spring-angular
+[daviddm-image]: https://david-dm.org/sky10p/generator-spring-angular.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/sky10p/generator-spring-angular
+[coveralls-image]: https://coveralls.io/repos/sky10p/generator-spring-angular/badge.svg
+[coveralls-url]: https://coveralls.io/r/sky10p/generator-spring-angular

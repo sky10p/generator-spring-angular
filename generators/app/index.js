@@ -20,7 +20,7 @@ function addReplace(path, regexExpression, replaceBy) {
 module.exports = class extends Generator {
   prompting() {
     this.log(
-      yosay(`Welcome to the rpa generator ${chalk.red('generator-rpa-spring-angular')}!`)
+      yosay(`Welcome to the rpa generator ${chalk.red('generator-spring-angular')}!`)
     );
   }
 
@@ -137,6 +137,6 @@ module.exports = class extends Generator {
   }
 
   generated() {
-    this.log(yosay(`${chalk.red('generator-rpa-spring-angular')} generated`));
+    this.log(yosay(`${chalk.red('generator-spring-angular')} generated`));
   }
 };
