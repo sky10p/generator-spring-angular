@@ -5,7 +5,7 @@ import { Route } from '@angular/compiler/src/core';
 import { NgProgress, NgProgressRef } from '@ngx-progressbar/core';
 
 @Component({
-  selector: 'app-header',
+  selector: '<%= prefix_angular %>-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })

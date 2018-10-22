@@ -25,7 +25,7 @@ Scripts en uhis-persistence/src/main/resources/db/migration/{databaseType}
 
 ### Configuración de conexión
 
-Cambiar Property spring.profiles.active=<%= databaseType %>
+Cambiar Property spring.profiles.active={databaseType}
 
 uhis-rest/src/main/resources/application-{database}.properties
 or

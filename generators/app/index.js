@@ -19,9 +19,7 @@ function addReplace(path, regexExpression, replaceBy) {
 
 module.exports = class extends Generator {
   prompting() {
-    this.log(
-      yosay(`Welcome to the generator-spring-angular generator ${chalk.red('generator-spring-angular')}!`)
-    );
+    this.log(`Welcome to the generator-spring-angular generator ${chalk.red('generator-spring-angular')}!`);
   }
 
   async askForProjectName() {
@@ -89,6 +87,17 @@ module.exports = class extends Generator {
     ]);
   }
 
+  async askForAngularConfiguration() {
+    this.angularAnswer = await this.prompt([
+      {
+        type: 'input',
+        name: 'prefix_angular',
+        message: 'Choose the angular prefix for components (app is recommenden by good practices of Angular)',
+        default: 'app'
+      }
+    ]);
+  }
+
   copyFolders() {
     this.registerTransformStream(
       rename(path => {
@@ -123,7 +132,8 @@ module.exports = class extends Generator {
       rest_name: this.submodulesAnswers.restName,
       rest_camelcase: toCamelCase(this.submodulesAnswers.restName),
       webapp_name: this.submodulesAnswers.webappName,
-      webapp_camelcase: toCamelCase(this.submodulesAnswers.webappName)
+      webapp_camelcase: toCamelCase(this.submodulesAnswers.webappName),
+      prefix_angular: this.angularAnswer.prefix_angular
     });
   }
 
@@ -137,6 +147,6 @@ module.exports = class extends Generator {
   }
 
   generated() {
-    this.log(yosay(`${chalk.red('generator-spring-angular')} generated`));
+    this.log(`${chalk.red('generator-spring-angular')} generated`);
   }
 };

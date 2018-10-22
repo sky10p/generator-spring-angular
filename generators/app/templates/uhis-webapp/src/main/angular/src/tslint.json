@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "app",
+            "<%= prefix_angular %>",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "app",
+            "<%= prefix_angular %>",
             "kebab-case"
         ]
     }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-home-option-menu',
+  selector: '<%= prefix_angular %>-home-option-menu',
   templateUrl: './home-option-menu.component.html',
   styleUrls: ['./home-option-menu.component.css']
 })
@@ -13,7 +13,7 @@ export class HomeOptionMenuComponent implements OnInit {
   @Input()
   subtitle: string;
   _url: string;
-  
+
   constructor() { }
 
   ngOnInit() {

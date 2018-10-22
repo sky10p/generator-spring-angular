@@ -5,7 +5,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 import { NgProgress, NgProgressRef } from '@ngx-progressbar/core';
 
 @Component({
-  selector: 'app-login',
+  selector: '<%= prefix_angular %>-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
