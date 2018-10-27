@@ -4,29 +4,29 @@
 
 Tenemos los siguiente submódulos y paquetas
 
-* uhis-business-logic
+* business-logic
   * Utilidades, Servicios
-* uhis-data
+* data
   * Modelos, Interfaces, Dao
-* uhis-multimodule
+* multimodule
   * Parent Module (For compile with maven)
-* uhis-persistence
+* persistence
   * Entities, Repositories, Migraciones bases de datos.
-* uhis-rest
+* rest
   * Api Rest
-* uhis-webapp
+* webapp
   * Página Web (Angular)
 
 ## Configuración base de datos
 
 ### Migraciones automáticas
 
-Scripts en uhis-persistence/src/main/resources/db/migration/{databaseType}
+Scripts en <%= persistence_name %>/src/main/resources/db/migration/{databaseType}
 
 ### Configuración de conexión
 
 Cambiar Property spring.profiles.active={databaseType}
 
-uhis-rest/src/main/resources/application-{database}.properties
+<%= rest_name %>/src/main/resources/application-{database}.properties
 or
-uhis-rest/src/main/resources/application-yml
+<%= rest_name %>/src/main/resources/application-yml

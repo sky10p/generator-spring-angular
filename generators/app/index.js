@@ -103,17 +103,17 @@ module.exports = class extends Generator {
       rename(path => {
         addReplace(
           path,
-          /(uhis-business-logic)/g,
+          /(gsatemplate-business-logic)/g,
           this.submodulesAnswers.businessLogicName
         );
-        addReplace(path, /(uhis-data)/g, this.submodulesAnswers.dataName);
-        addReplace(path, /(uhis-persistence)/g, this.submodulesAnswers.persistenceName);
-        addReplace(path, /(uhis-rest)/g, this.submodulesAnswers.restName);
-        addReplace(path, /(uhis-webapp)/g, this.submodulesAnswers.webappName);
+        addReplace(path, /(gsatemplate-data)/g, this.submodulesAnswers.dataName);
+        addReplace(path, /(gsatemplate-persistence)/g, this.submodulesAnswers.persistenceName);
+        addReplace(path, /(gsatemplate-rest)/g, this.submodulesAnswers.restName);
+        addReplace(path, /(gsatemplate-webapp)/g, this.submodulesAnswers.webappName);
 
-        addReplace(path, /(uhis)/g, this.answers.projectName);
-        addReplace(path, /(Uhis)/g, toCamelCase(this.answers.projectName));
-        addReplace(path, /(UHIS)/g, this.answers.projectName.toUpperCase());
+        addReplace(path, /(gsatemplate)/g, this.answers.projectName);
+        addReplace(path, /(Gsatemplate)/g, toCamelCase(this.answers.projectName));
+        addReplace(path, /(GSATEMPLATE)/g, this.answers.projectName.toUpperCase());
 
         return path;
       })
